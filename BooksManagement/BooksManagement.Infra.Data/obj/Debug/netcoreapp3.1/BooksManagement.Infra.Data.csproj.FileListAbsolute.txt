@@ -1,0 +1,22 @@
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.Data\obj\Debug\netcoreapp3.1\BooksManagement.Infra.Data.csprojAssemblyReference.cache
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.Data\obj\Debug\netcoreapp3.1\BooksManagement.Infra.Data.AssemblyInfoInputs.cache
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.Data\obj\Debug\netcoreapp3.1\BooksManagement.Infra.Data.AssemblyInfo.cs
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.Data\bin\Debug\netcoreapp3.1\BooksManagement.Infra.Data.deps.json
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.Data\bin\Debug\netcoreapp3.1\BooksManagement.Infra.Data.dll
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.Data\bin\Debug\netcoreapp3.1\BooksManagement.Infra.Data.pdb
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.Data\bin\Debug\netcoreapp3.1\BooksManagement.Domain.dll
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.Data\bin\Debug\netcoreapp3.1\BooksManagement.Domain.pdb
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.Data\obj\Debug\netcoreapp3.1\BooksManagement.Infra.Data.csproj.CopyComplete
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.Data\obj\Debug\netcoreapp3.1\BooksManagement.Infra.Data.dll
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.Data\obj\Debug\netcoreapp3.1\BooksManagement.Infra.Data.pdb
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.Data\bin\Debug\netcoreapp3.1\BooksManagement.Infra.Data.deps.json
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.Data\bin\Debug\netcoreapp3.1\BooksManagement.Infra.Data.dll
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.Data\bin\Debug\netcoreapp3.1\BooksManagement.Infra.Data.pdb
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.Data\bin\Debug\netcoreapp3.1\BooksManagement.Domain.dll
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.Data\bin\Debug\netcoreapp3.1\BooksManagement.Domain.pdb
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.Data\obj\Debug\netcoreapp3.1\BooksManagement.Infra.Data.csprojAssemblyReference.cache
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.Data\obj\Debug\netcoreapp3.1\BooksManagement.Infra.Data.AssemblyInfoInputs.cache
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.Data\obj\Debug\netcoreapp3.1\BooksManagement.Infra.Data.AssemblyInfo.cs
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.Data\obj\Debug\netcoreapp3.1\BooksManagement.Infra.Data.csproj.CopyComplete
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.Data\obj\Debug\netcoreapp3.1\BooksManagement.Infra.Data.dll
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.Data\obj\Debug\netcoreapp3.1\BooksManagement.Infra.Data.pdb

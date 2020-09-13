@@ -1,0 +1,22 @@
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.App\bin\Debug\netcoreapp3.1\BooksManagement.Domain.dll
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.App\obj\Debug\netcoreapp3.1\BooksManagement.App.csprojAssemblyReference.cache
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.App\obj\Debug\netcoreapp3.1\BooksManagement.App.AssemblyInfoInputs.cache
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.App\obj\Debug\netcoreapp3.1\BooksManagement.App.AssemblyInfo.cs
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.App\bin\Debug\netcoreapp3.1\BooksManagement.App.deps.json
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.App\bin\Debug\netcoreapp3.1\BooksManagement.App.dll
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.App\bin\Debug\netcoreapp3.1\BooksManagement.App.pdb
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.App\bin\Debug\netcoreapp3.1\BooksManagement.Domain.pdb
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.App\obj\Debug\netcoreapp3.1\BooksManagement.App.csproj.CopyComplete
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.App\obj\Debug\netcoreapp3.1\BooksManagement.App.dll
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.App\obj\Debug\netcoreapp3.1\BooksManagement.App.pdb
+D:\Projetos\books-management\BooksManagement\BooksManagement.App\bin\Debug\netcoreapp3.1\BooksManagement.App.deps.json
+D:\Projetos\books-management\BooksManagement\BooksManagement.App\bin\Debug\netcoreapp3.1\BooksManagement.App.dll
+D:\Projetos\books-management\BooksManagement\BooksManagement.App\bin\Debug\netcoreapp3.1\BooksManagement.App.pdb
+D:\Projetos\books-management\BooksManagement\BooksManagement.App\bin\Debug\netcoreapp3.1\BooksManagement.Domain.dll
+D:\Projetos\books-management\BooksManagement\BooksManagement.App\bin\Debug\netcoreapp3.1\BooksManagement.Domain.pdb
+D:\Projetos\books-management\BooksManagement\BooksManagement.App\obj\Debug\netcoreapp3.1\BooksManagement.App.csprojAssemblyReference.cache
+D:\Projetos\books-management\BooksManagement\BooksManagement.App\obj\Debug\netcoreapp3.1\BooksManagement.App.AssemblyInfoInputs.cache
+D:\Projetos\books-management\BooksManagement\BooksManagement.App\obj\Debug\netcoreapp3.1\BooksManagement.App.AssemblyInfo.cs
+D:\Projetos\books-management\BooksManagement\BooksManagement.App\obj\Debug\netcoreapp3.1\BooksManagement.App.csproj.CopyComplete
+D:\Projetos\books-management\BooksManagement\BooksManagement.App\obj\Debug\netcoreapp3.1\BooksManagement.App.dll
+D:\Projetos\books-management\BooksManagement\BooksManagement.App\obj\Debug\netcoreapp3.1\BooksManagement.App.pdb

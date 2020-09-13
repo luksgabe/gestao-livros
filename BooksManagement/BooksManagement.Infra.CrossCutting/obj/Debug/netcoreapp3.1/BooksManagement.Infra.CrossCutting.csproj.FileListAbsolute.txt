@@ -1,0 +1,30 @@
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Domain.dll
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Infra.Data.dll
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\obj\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.csprojAssemblyReference.cache
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\obj\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.AssemblyInfoInputs.cache
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\obj\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.AssemblyInfo.cs
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.deps.json
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.dll
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.pdb
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.App.dll
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.App.pdb
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Domain.pdb
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Infra.Data.pdb
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\obj\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.csproj.CopyComplete
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\obj\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.dll
+C:\Users\lucas.pereira\Documents\Meus projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\obj\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.pdb
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.deps.json
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.dll
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.pdb
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.App.dll
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Domain.dll
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Infra.Data.dll
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.App.pdb
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Domain.pdb
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\bin\Debug\netcoreapp3.1\BooksManagement.Infra.Data.pdb
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\obj\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.csprojAssemblyReference.cache
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\obj\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.AssemblyInfoInputs.cache
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\obj\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.AssemblyInfo.cs
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\obj\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.csproj.CopyComplete
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\obj\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.dll
+D:\Projetos\books-management\BooksManagement\BooksManagement.Infra.CrossCutting\obj\Debug\netcoreapp3.1\BooksManagement.Infra.CrossCutting.pdb
