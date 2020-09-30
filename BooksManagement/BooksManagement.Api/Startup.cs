@@ -18,9 +18,13 @@ namespace BooksManagement.Api
 {
     public class Startup
     {
+        private readonly string _appOrigin = "_BookManagement";
+        private readonly string _appHost;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            _appHost = Configuration.GetValue<string>("AppHost");
         }
 
         public IConfiguration Configuration { get; }
@@ -29,6 +33,15 @@ namespace BooksManagement.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: _appOrigin,
+                                    builder =>
+                                    {
+                                        builder.WithOrigins(_appHost);
+                                    });
+            });
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -47,6 +60,8 @@ namespace BooksManagement.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(_appOrigin);
 
             app.UseAuthorization();
 
