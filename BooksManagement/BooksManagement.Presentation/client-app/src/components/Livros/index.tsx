@@ -18,7 +18,7 @@ type Props = StateProps & DispatchProps;
 
 class Livros extends Component<Props> {
 
-    componentDidMount() {
+    componentDidMount() {        
         const { loadRequest } = this.props;
         loadRequest();
     }
@@ -26,7 +26,8 @@ class Livros extends Component<Props> {
     render() {
 
         const renderDataTable = (books: Book[]) => {
-            if(books) {
+            debugger;
+            if(books && books.length > 0) {
                 return (
                     books.map((book: Book) => (
                         <tr key={book.id}>

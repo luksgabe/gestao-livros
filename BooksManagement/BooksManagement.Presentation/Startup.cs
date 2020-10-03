@@ -75,7 +75,7 @@ namespace BooksManagement.Presentation
             {
                 spa.Options.SourcePath = "client-app";
 
-                if (env.IsDevelopment())
+                if (env.IsDevelopment() || env.IsStaging())
                 {
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }

@@ -20,7 +20,7 @@
     "IIS Express - Staging": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "api/author": null,
+      "launchUrl": "api/author",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Staging"
       }
