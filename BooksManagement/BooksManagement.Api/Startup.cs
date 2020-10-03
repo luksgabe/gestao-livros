@@ -2,13 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BooksManagement.Infra.CrossCutting.Configuration;
 using BooksManagement.Infra.CrossCutting.IoT;
-using BooksManagement.Infra.Data.Context;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -18,13 +16,20 @@ namespace BooksManagement.Api
 {
     public class Startup
     {
-        private readonly string _appOrigin = "_BookManagement";
-        private readonly string _appHost;
-
-        public Startup(IConfiguration configuration)
+        public Startup(IHostEnvironment env)
         {
-            Configuration = configuration;
-            _appHost = Configuration.GetValue<string>("AppHost");
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", true, true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true);
+
+            if (env.IsDevelopment())
+            {
+                builder.AddUserSecrets<Startup>();
+            }
+
+            builder.AddEnvironmentVariables();
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -34,18 +39,17 @@ namespace BooksManagement.Api
         {
             services.AddControllers();
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy(name: _appOrigin,
-                                    builder =>
-                                    {
-                                        builder.WithOrigins(_appHost);
-                                    });
-            });
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy(name: _appOrigin,
+            //                        builder =>
+            //                        {
+            //                            builder.WithOrigins(_appHost);
+            //                        });
+            //});
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+            // Setting DBContexts
+            services.AddDatabaseConfiguration(Configuration);
             RegisterServices(services);
         }
 
@@ -57,11 +61,17 @@ namespace BooksManagement.Api
                 app.UseDeveloperExceptionPage();
             }
 
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseCors(_appOrigin);
+            app.UseCors(c =>
+            {
+                c.AllowAnyHeader();
+                c.AllowAnyMethod();
+                c.AllowAnyOrigin();
+            });
 
             app.UseAuthorization();
 

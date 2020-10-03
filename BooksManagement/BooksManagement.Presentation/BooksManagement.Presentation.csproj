@@ -7,6 +7,8 @@
     <IsPackable>false</IsPackable>
     <SpaRoot>client-app\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+    <Configurations>Debug;Release;Stage;Staging</Configurations>
+    <UserSecretsId>f9a9edaf-bd7c-469e-be90-0f06a99f4438</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +20,10 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BooksManagement.Infra.CrossCutting\BooksManagement.Infra.CrossCutting.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
