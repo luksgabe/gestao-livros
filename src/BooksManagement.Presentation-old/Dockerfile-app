@@ -1,0 +1,19 @@
+FROM murbanowicz/net-core-react-builder AS builder
+RUN apt-get update && apt-get install -y locales tzdata
+
+WORKDIR /client-app
+COPY . .
+
+ARG NODE_ENV
+RUN echo ${NODE_ENV}
+COPY ./env/${NODE_ENV}.env .env
+
+WORKDIR /app
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine AS final
+RUN dotnet restore 
+RUN dotnet publish -c Release -o /app/publish
+
+WORKDIR /app
+COPY --from=builder /app/publish .
+EXPOSE 80
+ENTRYPOINT ["dotnet", "BooksManagement.Presentation.dll"]

@@ -1,0 +1,33 @@
+
+services: 
+    books-management-api:
+        image: book-management-api
+        container_name: book-management-api
+        hostname: book-management-api
+        build: 
+            context: ./src
+            dockerfile: BooksManagement.Api/Dockerfile
+        environment:
+            ASPNETCORE_ENVIRONMENT: $env_type
+        ports: 
+            - "8000:80"
+        networks:
+            - default
+                
+    books-management-app:
+        image: book-management-app
+        container_name: book-management-app
+        hostname: book-management-app
+        build: 
+            context: ./src
+            dockerfile: client-app/Dockerfile
+            args:
+                NODE_ENV: $env_type
+        ports: 
+            - "5000:80"
+        networks:
+            - default
+
+
+
+            
