@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mssql
+spec:
+  selector:
+    matchLabels:
+      app: mssql
+  template:
+    metadata:
+      labels:
+        app: mssql
+    spec:
+      containers:
+      - name: mssql
+        image: mcr.microsoft.com/mssql/server
+        ports:
+        - containerPort: 1433
+        resources: {}
+        env: 
+          - name: ACCEPT_EULA
+            value: 'Y'
+          - name: SA_PASSWORD
+            value: 'CZyEajm4wR6CJGAA'
