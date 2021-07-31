@@ -1,0 +1,51 @@
+#Deployment
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-management-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: book-management-api
+  template:
+    metadata:
+      labels:
+        app: book-management-api
+    spec:
+      containers:
+      - name: book-management-api
+        image: luksgabe/book-management-api
+        imagePullPolicy: Always
+        env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: 'Staging'
+        ports:
+          - containerPort: 5000
+        resources: {}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-management-app
+spec:
+  selector:
+    matchLabels:
+      app: book-management-app
+  template:
+    metadata:
+      labels:
+        app: book-management-app
+    spec:
+      containers:
+      - name: book-management-app
+        image: luksgabe/book-management-app
+        imagePullPolicy: Always
+        env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: 'Staging'
+        ports:
+          - containerPort: 3000
+        resources: {}
+          
