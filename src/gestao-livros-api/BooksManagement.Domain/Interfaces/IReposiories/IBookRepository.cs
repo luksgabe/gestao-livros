@@ -8,5 +8,7 @@ namespace BooksManagement.Domain.Interfaces.IReposiories
     {
         Task<IEnumerable<Book>> GetAllBooks();
         Book LastBookCreatedAsync();
+        new Book Add(Book obj);
+        new Task<Book> AddAsync(Book obj);
     }
 }

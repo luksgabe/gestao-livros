@@ -5,9 +5,16 @@ namespace BooksManagement.Domain.Entities
 {
     public abstract class BaseEntity
     {
-        public virtual long Id { get; set; }
-        public virtual DateTime CreatedAt { get; set; }
-        public virtual DateTime UpdatedAt { get; set; }
-        public Status Status { get; set; }
+        public virtual long Id { get; protected set; }
+        public virtual DateTime CreatedAt { get; protected set; }
+        public virtual DateTime UpdatedAt { get; protected set; }
+        public Status Status { get; protected set; }
+
+
+        public void SetStatus(Status status)
+        {
+            Status = status;
+        }
+
     }
 }

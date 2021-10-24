@@ -7,6 +7,7 @@ namespace BooksManagement.Domain.Interfaces.IReposiories
 {
     public interface IRepository<TEntity> : IDisposable where TEntity : class
     {
+        void Add(TEntity obj);
         Task AddAsync(TEntity obj);
         Task<TEntity> GetByIdAsync(long id);
         IQueryable<TEntity> GetAll();

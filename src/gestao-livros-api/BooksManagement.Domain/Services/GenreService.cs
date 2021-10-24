@@ -19,9 +19,6 @@ namespace BooksManagement.Domain.Services
 
         public async Task Create(Genre genre)
         {
-            genre.CreatedAt = DateTime.Now;
-            genre.UpdatedAt = DateTime.Now;
-            genre.Status = Status.Active;
             await _unityOfWork.genreRepository.AddAsync(genre);
             _unityOfWork.authorRepository.SaveChanges();
         }
