@@ -21,6 +21,11 @@ namespace BooksManagement.Infra.Data.Repositorys
             _context.ChangeTracker.LazyLoadingEnabled = false;
         }
 
+        public virtual void Add(TEntity obj)
+        {
+            _dbSet.Add(obj);
+        }
+
         public virtual async Task AddAsync(TEntity obj)
         {
             await _dbSet.AddAsync(obj);

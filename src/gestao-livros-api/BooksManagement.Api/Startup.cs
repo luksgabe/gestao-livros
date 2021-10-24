@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BooksManagement.Api.Configurations;
 using BooksManagement.Infra.CrossCutting.Configuration;
 using BooksManagement.Infra.CrossCutting.IoT;
 
@@ -39,18 +40,15 @@ namespace BooksManagement.Api
         {
             services.AddControllers();
             services.AddCors();
-            //services.AddCors(options =>
-            //{
-            //    options.AddPolicy(name: _appOrigin,
-            //                        builder =>
-            //                        {
-            //                            builder.WithOrigins(_appHost);
-            //                        });
-            //});
 
             // Setting DBContexts
             services.AddDatabaseConfiguration(Configuration);
-            RegisterServices(services);
+
+            // Swagger Config
+            services.AddSwaggerConfiguration();
+
+            // .NET Native DI Abstraction
+            services.AddDependencyInjectionConfiguration();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,7 +58,6 @@ namespace BooksManagement.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
 
             app.UseHttpsRedirection();
 
@@ -79,11 +76,9 @@ namespace BooksManagement.Api
             {
                 endpoints.MapControllers();
             });
-        }
 
-        private static void RegisterServices(IServiceCollection services)
-        {
-            NativeInjectorBootStrapper.RegisterServices(services);
+            app.UseSwaggerSetup();
         }
+        
     }
 }

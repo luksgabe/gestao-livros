@@ -27,5 +27,17 @@ namespace BooksManagement.Infra.Data.Repositorys
             var idMax = GetAll().Max(p => p.Id);
             return GetAll().FirstOrDefault(p => p.Id == idMax);
         }
+        public new Book Add(Book obj)
+        {
+            var set = _context.Set<Book>();
+            return set.Add(obj).Entity;
+        }
+        public new async Task<Book> AddAsync(Book obj)
+        {
+            var set = _context.Set<Book>();
+            var result = await set.AddAsync(obj);
+            return result.Entity;
+        }
+
     }
 }

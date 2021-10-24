@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BooksManagement.Infra.Data.Migrations
 {
-    public partial class baseinit : Migration
+    public partial class initialmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -86,11 +86,7 @@ namespace BooksManagement.Infra.Data.Migrations
                 columns: table => new
                 {
                     book_id = table.Column<long>(nullable: false),
-                    genre_id = table.Column<long>(nullable: false),
-                    Id = table.Column<long>(nullable: false),
-                    CreatedAt = table.Column<DateTime>(nullable: false),
-                    UpdatedAt = table.Column<DateTime>(nullable: false),
-                    Status = table.Column<int>(nullable: false)
+                    genre_id = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {

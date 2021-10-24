@@ -7,7 +7,7 @@ namespace BooksManagement.Domain.Interfaces.IServices
     public interface IBookService
     {
         Task<IEnumerable<Book>> GetBooks();
-        Task Create(Book book);
+        Task<Book> Create(Book book);
         Task<Book> GetBook(long id);
     }
 }

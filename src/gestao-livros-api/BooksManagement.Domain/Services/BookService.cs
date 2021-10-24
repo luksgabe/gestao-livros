@@ -18,46 +18,16 @@ namespace BooksManagement.Domain.Services
             _unityOfWork = unityOfWork;
         }
 
-        public async Task Create(Book book)
+        public async Task<Book> Create(Book book)
         {
-            book.CreatedAt = DateTime.Now;
-            book.UpdatedAt = DateTime.Now;
-            book.Status = Status.Active;
-            List<long> genresIds = null;
+            Author author = await _unityOfWork.authorRepository.GetByIdAsync(book.AuthorId);
+            book.SetAuthor(author);
 
-            var author = await _unityOfWork.authorRepository.GetByIdAsync(book.AuthorId);
-            book.Author = author;
+            var result = await _unityOfWork.bookRepository.AddAsync(book);
 
-            
-            //Book newBook = await _unityOfWork.bookRepository.LastBookCreatedAsync();
-
-            if (book.BookGenres != null && book.BookGenres.Any())
-            {
-                genresIds = new List<long>();
-                book.BookGenres.ToList().ForEach(async p => {
-                    genresIds.Add(p.GenreId);
-                });
-
-                book.BookGenres = new List<BookGenre>();
-
-                genresIds.ForEach(async idGenre =>
-                {
-                    Genre genre = await _unityOfWork.genreRepository.GetByIdAsync(idGenre);
-                    book.BookGenres.Add(new BookGenre
-                    {
-                        Genre = genre,
-                        Status = Status.Active,
-                        CreatedAt = DateTime.Now,
-                        UpdatedAt = DateTime.Now
-                    });
-                });
-            }
-
-            await _unityOfWork.bookRepository.AddAsync(book);
-
-            //await _unityOfWork.bookRepository.UpdateAsync(book);
-
-            _unityOfWork.bookRepository.SaveChanges();
+            //_unityOfWork.bookRepository.SaveChanges();
+            result = null;
+            return result;
         }
 
         public async Task<Book> GetBook(long id)

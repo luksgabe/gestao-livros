@@ -22,13 +22,11 @@ namespace BooksManagement.Domain.Services
             return _unityOfWork.authorRepository.GetAll();
         }
 
-        public async Task Create(Author author)
+        public async Task<Author> Create(Author author)
         {
-            author.CreatedAt = DateTime.Now;
-            author.UpdatedAt = DateTime.Now;
-            author.Status = Status.Active;
-            await _unityOfWork.authorRepository.AddAsync(author);
+            var result = await _unityOfWork.authorRepository.AddAsync(author);
             _unityOfWork.authorRepository.SaveChanges();
+            return result;
         }
     }
 }

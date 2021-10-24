@@ -97,18 +97,6 @@ namespace BooksManagement.Infra.Data.Migrations
                         .HasColumnName("genre_id")
                         .HasColumnType("bigint");
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<long>("Id")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
                     b.HasKey("BookId", "GenreId");
 
                     b.HasIndex("GenreId");
