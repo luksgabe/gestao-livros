@@ -1,16 +1,17 @@
 import { AxiosResponse } from "axios";
-import { call, put } from "redux-saga/effects";
-import api from "../../../services/api";
-import { loadSuccess, loadFailure } from "./action";
-import { Book } from './types';
+import { takeLatest, all, call, put } from "redux-saga/effects";
+import { loadBooks } from "./action";
+import { Book, BooksTypes } from './types';
 
-export function* load() {
+export function* getAllBooks() {
     try {
-      const response: AxiosResponse<Book[]> = yield call(api.get, "book");
-      console.log(response);
-      yield put(loadSuccess(response.data));
+      // const response: AxiosResponse<Book[]> = yield call(useApi.call, "book");
+      // yield put(loadBooks(response.data));
     } catch (err) {
-      yield put(loadFailure());
+      console.log(`Erro:${err}`)
     }
   }
   
+export default all([
+  takeLatest(BooksTypes.GET_BOOKS, getAllBooks)
+])

@@ -2,9 +2,8 @@ import { Status } from '../Util/enums';
 import { Author } from '../Authors/types';
 
 export enum BooksTypes {
-    LOAD_REQUEST = "@books/LOAD_REQUEST",
-    LOAD_SUCCESS = "@books/LOAD_SUCCESS",
-    LOAD_FAILURE = "@books/LOAD_FAILURE",
+    GET_BOOKS = "@books/GET_BOOKS",
+    LOAD_BOOKS = "@books/LOAD_BOOKS",
 }
 
 export interface Book {
