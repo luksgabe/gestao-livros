@@ -9,7 +9,7 @@
     "@types/jest": "^26.0.23",
     "@types/node": "^15.12.5",
     "@types/react": "^17.0.11",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "bootstrap": "^4.5.2",
     "connected-react-router": "^6.8.0",
     "history": "4.10.1",
