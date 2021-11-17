@@ -1,6 +1,5 @@
 import { action } from "typesafe-actions";
 import { BooksTypes, Book } from './types';
 
-export const loadRequest = () => action(BooksTypes.LOAD_REQUEST);
-export const loadSuccess = (data: Book[]) => action(BooksTypes.LOAD_SUCCESS, { data });
-export const loadFailure = () => action(BooksTypes.LOAD_FAILURE);
+export const getBooks = () => action(BooksTypes.GET_BOOKS);
+export const loadBooks = (data: Book[]) => action(BooksTypes.LOAD_BOOKS, { data });

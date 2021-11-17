@@ -9,17 +9,15 @@ const INITIAL_STATE: BooksState = {
 
 const reducer: Reducer<BooksState> = (state: BooksState = INITIAL_STATE, action) => {
     switch (action.type) {
-        case BooksTypes.LOAD_REQUEST:
+        case BooksTypes.GET_BOOKS:
             return { ...state, loading: true };
-        case BooksTypes.LOAD_SUCCESS: 
+        case BooksTypes.LOAD_BOOKS: 
             return {
                 ...state,
                 loading: false,
                 error: false,
                 data: action.payload.data,
             };
-        case BooksTypes.LOAD_FAILURE:
-            return { ...state, loading: false, error: true, data: [] };
         default: 
             return state;
     }
