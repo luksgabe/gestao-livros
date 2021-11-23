@@ -21,6 +21,21 @@ namespace BooksManagement.Infra.Data.Mappings
                 .HasMaxLength(100)
                 .IsRequired().HasColumnName("title");
 
+            builder.Property(c => c.Synopsis)
+                .HasColumnType("varchar(256)")
+                .HasMaxLength(256)
+                .IsRequired().HasColumnName("synopse");
+
+            builder.Property(c => c.Classification)
+                .HasColumnType("decimal(5,2)")
+                .IsRequired().HasColumnName("classification");
+
+            builder.Property(c => c.PriceAverage)
+                .HasColumnType("decimal(5,2)")
+                .IsRequired().HasColumnName("price_average");
+
+            builder.Property(c => c.PublicationDate).HasColumnName("publication_date");
+
             builder.Property(c => c.Status).HasColumnName("status").HasColumnType("smallint");
 
             builder.Property(c => c.CreatedAt).HasColumnName("created_at");

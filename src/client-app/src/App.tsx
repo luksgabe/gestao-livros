@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Provider } from "react-redux";
 import Routes from './routes';
 import store from "./store";
@@ -8,7 +8,7 @@ import Layout from './components/Shared/Layout';
 
 
 const App = () => (
-  <Provider store = {store}>
+  <Provider store={store}>
     <Router history={history}>
       <Layout>
         <Routes/>

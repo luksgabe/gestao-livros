@@ -2,6 +2,7 @@ using BooksManagement.Domain.Entities;
 using BooksManagement.Domain.Interfaces.IReposiories;
 using BooksManagement.Domain.Interfaces.IServices;
 using Moq;
+using System;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -18,7 +19,7 @@ namespace BooksManagement.Domain.Test
             var bookRepository = new Mock<IBookRepository>();
             var author = new Author("Lucas Gabriel");
 
-            var book = new Book("A volta dos que não foram", 1);
+            var book = new Book("A volta dos que não foram", DateTime.Now, string.Empty, 35, 5, 1);
             book.SetAuthor(author);
             bookRepository.Setup(pr => pr.Add(It.IsAny<Book>())).Returns(book);
 
