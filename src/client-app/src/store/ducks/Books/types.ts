@@ -9,6 +9,10 @@ export enum BooksTypes {
 export interface Book {
     id: number;
     title: string;
+    synopsis: string;
+    priceAverage: number;
+    classification: number;
+    publicationDate: Date;
     authorId: number;
     author: Author;
     createdAt: Date;

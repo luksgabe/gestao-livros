@@ -14,7 +14,7 @@ namespace BooksManagement.App.AutoMapper
             CreateMap<List<AuthorDto>, List<Author>>();
 
             CreateMap<BookDto, Book>()
-                .ConvertUsing(p => new Book(p.Id, p.Title, p.AuthorId, p.Status, p.CreatedAt));
+                .ConvertUsing(p => new Book(p.Id, p.Title, p.PublicationDate, p.Synopsis, p.PriceAverage, p.Classification, p.AuthorId, p.Status, p.CreatedAt));
             CreateMap<List<BookDto>, List<Book>>();
 
             CreateMap<GenreDto, Genre>()

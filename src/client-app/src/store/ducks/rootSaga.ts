@@ -1,4 +1,4 @@
-import { all, AllEffect, ForkEffect, takeLatest } from "redux-saga/effects";
+import { all, AllEffect, ForkEffect } from "redux-saga/effects";
 import bookSagas from "../ducks/Books/sagas";
 
 

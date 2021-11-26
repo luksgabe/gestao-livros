@@ -25,8 +25,7 @@ namespace BooksManagement.Domain.Services
 
             var result = await _unityOfWork.bookRepository.AddAsync(book);
 
-            //_unityOfWork.bookRepository.SaveChanges();
-            result = null;
+            _unityOfWork.bookRepository.SaveChanges();
             return result;
         }
 
