@@ -1,4 +1,4 @@
-﻿using BooksManagement.Domain.DTOs;
+﻿using BooksManagement.App.ViewModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -6,7 +6,7 @@ namespace BooksManagement.App.Interfaces
 {
     public interface IGenreApp
     {
-        Task<IEnumerable<GenreDto>> GetGenres();
-        Task Create(GenreDto genre);
+        Task<IEnumerable<GenreViewModel>> GetGenres();
+        Task Create(GenreViewModel genre);
     }
 }

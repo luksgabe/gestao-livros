@@ -16,5 +16,10 @@ namespace BooksManagement.Domain.Entities
             Status = status;
         }
 
+        public void Update()
+        {
+            UpdatedAt = DateTime.Now;
+        }
+
     }
 }

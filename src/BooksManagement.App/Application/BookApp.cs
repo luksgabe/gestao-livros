@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using BooksManagement.App.Interfaces;
-using BooksManagement.Domain.DTOs;
+using BooksManagement.App.ViewModels;
 using BooksManagement.Domain.Entities;
 using BooksManagement.Domain.Interfaces.IServices;
 using System.Collections.Generic;
@@ -21,22 +20,22 @@ namespace BooksManagement.App.Application
             _mapper = mapper;
         }
 
-        public async Task Create(BookDto dto)
+        public async Task Create(BookViewModel dto)
         {
             var book = _mapper.Map<Book>(dto);
             await _bookService.Create(book);
         }
 
-        public async Task<IEnumerable<BookDto>> GetBooks()
+        public async Task<IEnumerable<BookViewModel>> GetBooks()
         {
-            var result = _mapper.Map<IEnumerable<BookDto>>(await _bookService.GetBooks());
+            var result = _mapper.Map<IEnumerable<BookViewModel>>(await _bookService.GetBooks());
             return result;
         }
 
-        public async Task<BookDto> GetBook(long id)
+        public async Task<BookViewModel> GetBook(long id)
         {
             Book book = await _bookService.GetBook(id);
-            return _mapper.Map<BookDto>(book);
+            return _mapper.Map<BookViewModel>(book);
         }
     }
 }

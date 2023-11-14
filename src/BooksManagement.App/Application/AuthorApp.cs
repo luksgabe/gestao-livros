@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using BooksManagement.App.Interfaces;
-using BooksManagement.Domain.DTOs;
+using BooksManagement.App.ViewModels;
 using BooksManagement.Domain.Entities;
 using BooksManagement.Domain.Interfaces.IServices;
 
@@ -20,15 +20,33 @@ namespace BooksManagement.App.Application
             _mapper = mapper;
         }
 
-        public async Task Create(AuthorDto dto)
+        public async Task<IEnumerable<AuthorViewModel>> GetAll()
         {
-            var author = _mapper.Map<Author>(dto);
-            await _authorService.Create(author);
+            return await Task.Run(() => _authorService.GetAuthors().ProjectTo<AuthorViewModel>(_mapper.ConfigurationProvider)) ;
         }
 
-        public async Task<IEnumerable<AuthorDto>> GetAuthors()
+        public async Task<AuthorViewModel> GetById(long id)
         {
-            return await Task.Run(() => _authorService.GetAuthors().ProjectTo<AuthorDto>(_mapper.ConfigurationProvider)) ;
+            return _mapper.Map<AuthorViewModel>(await _authorService.GetById(id));
+        }
+
+        public async Task Create(AuthorViewModel author)
+        {
+            var entity = _mapper.Map<Author>(author);
+            entity.NewBook();
+            await _authorService.Create(entity);
+        }
+
+        public async Task Update(AuthorViewModel viewModel)
+        {
+            var entity = _mapper.Map<Author>(viewModel);
+            entity.Update();
+            await _authorService.Update(entity);
+        }
+
+        public async Task Delete(long id)
+        {
+            await _authorService.Delete(id);
         }
     }
 }

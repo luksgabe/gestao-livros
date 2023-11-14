@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using BooksManagement.App.Interfaces;
-using BooksManagement.Domain.DTOs;
+using BooksManagement.App.ViewModels;
 using BooksManagement.Domain.Entities;
 using BooksManagement.Domain.Interfaces.IServices;
 
@@ -21,15 +21,15 @@ namespace BooksManagement.App.Application
             _mapper = mapper;
         }
 
-        public async Task Create(GenreDto dto)
+        public async Task Create(GenreViewModel dto)
         {
             var genre = _mapper.Map<Genre>(dto);
             await _genreService.Create(genre);
         }
 
-        public async Task<IEnumerable<GenreDto>> GetGenres()
+        public async Task<IEnumerable<GenreViewModel>> GetGenres()
         {
-            return await Task.Run(() => _genreService.GetGenres().ProjectTo<GenreDto>(_mapper.ConfigurationProvider));
+            return await Task.Run(() => _genreService.GetGenres().ProjectTo<GenreViewModel>(_mapper.ConfigurationProvider));
         }
     }
 }

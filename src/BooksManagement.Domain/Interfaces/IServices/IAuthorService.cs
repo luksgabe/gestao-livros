@@ -7,6 +7,9 @@ namespace BooksManagement.Domain.Interfaces.IServices
     public interface IAuthorService
     {
         IQueryable<Author> GetAuthors();
+        Task<Author> GetById(long id);
         Task<Author> Create(Author author);
+        Task Update(Author author);
+        Task Delete(long id);
     }
 }

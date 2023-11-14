@@ -16,8 +16,6 @@ namespace BooksManagement.Infra.CrossCutting.IoT
     {
         public static void RegisterServices(IServiceCollection services)
         {
-            AddAutoMapperSetup(services);
-
             services.AddScoped<IAuthorApp, AuthorApp>();
             services.AddScoped<IGenreApp, GenreApp>();
             services.AddScoped<IBookApp, BookApp>();
@@ -28,16 +26,6 @@ namespace BooksManagement.Infra.CrossCutting.IoT
 
             services.AddScoped<IUnityOfWork, UnityOfWork>();
             services.AddScoped<ApplicationDbContext>();
-        }
-
-
-        public static void AddAutoMapperSetup(this IServiceCollection services)
-        {
-            if (services == null) throw new ArgumentNullException(nameof(services));
-
-            var mappingConfig = AutoMapperConfig.RegisterMappings();
-            IMapper mapper = mappingConfig.CreateMapper();
-            services.AddSingleton(mapper);
         }
     }
 }

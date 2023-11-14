@@ -26,6 +26,12 @@ namespace BooksManagement.Domain.Entities
             UpdatedAt = DateTime.Now;
         }
 
+        public void NewBook()
+        {
+            CreatedAt = DateTime.Now;
+            Status = Status.Active;
+        }
+
         public void SetBooks(List<Book> books)
         {
             Books = books;
